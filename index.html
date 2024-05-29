@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Music 3000</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="site-title">NightBeat</h1>
+        <div class="time">
+            <h2 class="time-title">Aktualna Godzina</h2>
+            <p id="time" class="current-time"></p>
+        </div>
+    </header>
+
+    <section class="audio-player">
+        <div class="main-left">
+            <div class="left-content">
+                <div class="track-art"></div>
+                <div class="track-details">
+                    <div class="track-name">Track Name</div>
+                    <div class="track-artist">Track Artist</div>
+                </div>
+                <div class="slider-container">
+                    <div class="current-time">00:00</div>
+                    <input type="range" min="1" max="100" value="0" class="seek-slider" onchange="seekTo()">
+                    <div class="total-duration">00:30</div>
+                </div>
+            </div>
+
+            <div class="menu-bar">
+                <div class="buttons">
+                    <div class="prev-track" onclick="prevTrack()">
+                        <i class="fas fa-step-backward fa-2x"></i>
+                    </div>
+                    <div class="playpause-track" onclick="playpauseTrack()">
+                        <i class="fas fa-play-circle fa-5x"></i>
+                    </div>
+                    <div class="next-track" onclick="nextTrack()">
+                        <i class="fas fa-step-forward fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="song-list-right">
+            <div class="music-list show">
+                <div class="header">
+                    <div class="row">
+                        <i class="fas fa-music"></i>
+                        <span>Music list</span>
+                    </div>
+                </div>
+                <ul id="song-list">
+                    <!-- Songs will be dynamically added here -->
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
